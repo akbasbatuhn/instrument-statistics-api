@@ -1,0 +1,61 @@
+{
+  "stockInfo": [
+    {
+      "stockName": "Mercedes-Benz Group AG",
+      "priceInfo": {
+        "stockExchange": "Quotrix",
+        "lastUpdate": "7/25/22 9:22",
+        "bid": 54.72,
+        "bidVolume": 600,
+        "offer": 54.73,
+        "offerVolume": 600,
+        "spreadPercentage": "0.0100(0,02%)",
+        "lastTradePrice": 54.62,
+        "changePercentage": 3.44,
+        "stand": "25.07.22 09:26 Uhr",
+        "opening": 54.59,
+        "previousClosing": 54.39,
+        "tradedVolume": 8267,
+        "tradedAmount": 462621.32,
+        "dailyHigh": 56.64,
+        "dailyLow": 55.09,
+        "high52w" : 77.85,
+        "high52wDate": "17.02.22",
+        "low52w" : 50.24,
+        "low52wDate": "14.07.22"
+      },
+      "baseData": {
+        "securityType": "commonShares",
+        "stockISIN": "DE0007100000",
+        "stockWKN": "710000",
+        "currency": "EUR",
+        "initialListingDate": "09/04/2008",
+        "foundingYear": "1998",
+        "fiscalDate": "31.12."
+      },
+      "fundamentalData": {
+        "industry": "Automobile",
+        "marketCapital" : 58390000000,
+        "pieces": 1069837447,
+        "equityCapital" : 3007000000,
+        "numberOfEmployees": 274616,
+        "lastGeneralMeeting": "04/29/2022"
+      },
+      "portrait": "Die Mercedes-Benz Group AG ist mit ihren Geschäften Mercedes-Benz Cars, Daimler Trucks, Daimler Financial Services sowie Mercedes-Benz Vans und Daimler Buses ein weltweit führender Anbieter von Premium-Pkw und der größte Hersteller von Nutzfahrzeugen. Daimler Financial Services bietet zudem ein umfassendes, automobilnahes Finanzdienstleistungsangebot."
+    },
+    {
+      "stockName": "Mercedes-Benz Group BG"
+    },
+    {
+      "stockName": "Mercedes-Benz Group GG",
+      "priceInfo": {
+        "stockExchange":"Quotrix",
+        "lastUpdate":"10/20/22 9:25"
+      },
+      "baseData": {
+        "securityType":"commonShares"
+      },
+      "portrait": "Die Mercedes-Benz Group GG !!!"
+    }
+  ]
+}
