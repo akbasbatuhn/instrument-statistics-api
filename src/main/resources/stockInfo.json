@@ -4,7 +4,7 @@
       "stockName": "Mercedes-Benz Group AG",
       "priceInfo": {
         "stockExchange": "Quotrix",
-        "lastUpdate": "7/25/22 9:22",
+        "lastUpdate": "2022-07-25T09:22:15",
         "bid": 54.72,
         "bidVolume": 600,
         "offer": 54.73,
@@ -12,7 +12,7 @@
         "spreadPercentage": "0.0100(0,02%)",
         "lastTradePrice": 54.62,
         "changePercentage": 3.44,
-        "stand": "25.07.22 09:26 Uhr",
+        "stand": "2022-07-25T09:26:17",
         "opening": 54.59,
         "previousClosing": 54.39,
         "tradedVolume": 8267,
@@ -20,16 +20,16 @@
         "dailyHigh": 56.64,
         "dailyLow": 55.09,
         "high52w" : 77.85,
-        "high52wDate": "17.02.22",
+        "high52wDate": "17/02/22",
         "low52w" : 50.24,
-        "low52wDate": "14.07.22"
+        "low52wDate": "14/07/22"
       },
       "baseData": {
         "securityType": "commonShares",
         "stockISIN": "DE0007100000",
         "stockWKN": "710000",
         "currency": "EUR",
-        "initialListingDate": "09/04/2008",
+        "initialListingDate": "04/09/2008",
         "foundingYear": "1998",
         "fiscalDate": "31.12."
       },
@@ -44,18 +44,176 @@
       "portrait": "Die Mercedes-Benz Group AG ist mit ihren Geschäften Mercedes-Benz Cars, Daimler Trucks, Daimler Financial Services sowie Mercedes-Benz Vans und Daimler Buses ein weltweit führender Anbieter von Premium-Pkw und der größte Hersteller von Nutzfahrzeugen. Daimler Financial Services bietet zudem ein umfassendes, automobilnahes Finanzdienstleistungsangebot."
     },
     {
-      "stockName": "Mercedes-Benz Group BG"
-    },
-    {
-      "stockName": "Mercedes-Benz Group GG",
+      "stockName": "Volkswagen AG",
       "priceInfo": {
-        "stockExchange":"Quotrix",
-        "lastUpdate":"10/20/22 9:25"
+        "stockExchange": "Quotrix",
+        "lastUpdate": "2022-08-11T12:41:16",
+        "bid": 196.65,
+        "bidVolume": 140,
+        "offer": 196.85,
+        "offerVolume": 140,
+        "spreadPercentage": "0.200",
+        "lastTradePrice": 197.70,
+        "changePercentage": 1.46,
+        "stand": "2022-08-11T09:26:16",
+        "opening": 197.70,
+        "previousClosing": 194.85,
+        "tradedVolume": 0,
+        "tradedAmount": 0,
+        "dailyHigh": 197.70,
+        "dailyLow": 197.70,
+        "high52w" : 313.80,
+        "high52wDate": "12/08/21",
+        "low52w" : 162.95,
+        "low52wDate": "05/07/22"
       },
       "baseData": {
-        "securityType":"commonShares"
+        "securityType": "commonShares",
+        "stockISIN": "DE0007664005",
+        "stockWKN": "766400",
+        "currency": "EUR",
+        "initialListingDate": "04/09/2008",
+        "foundingYear": "1938",
+        "fiscalDate": "31.12."
       },
-      "portrait": "Die Mercedes-Benz Group GG !!!"
+      "fundamentalData": {
+        "industry": "Vehicle and machine construction",
+        "marketCapital" : 58340000000,
+        "pieces": 295089818,
+        "equityCapital" : 3007000000,
+        "numberOfEmployees": 370000,
+        "lastGeneralMeeting": "12/05/2022"
+      },
+      "portrait": "Der Volkswagen Konzern mit Sitz in Wolfsburg ist einer der führenden Automobilhersteller weltweit und der größte Automobilproduzent Europas. Neun Marken aus sieben europäischen Ländern gehören zum Konzern: Volkswagen, Audi, Bentley, Bugatti, Lamborghini, Scania, SEAT, Skoda und Volkswagen Nutzfahrzeuge."
+    },
+    {
+      "stockName": "Siemens AG",
+      "priceInfo": {
+        "stockExchange": "Quotrix",
+        "lastUpdate": "2022-08-11T13:01:31",
+        "bid": 107.84,
+        "bidVolume": 270,
+        "offer": 108.14,
+        "offerVolume": 270,
+        "spreadPercentage": "0.300",
+        "lastTradePrice": 107.94,
+        "changePercentage": -1.30,
+        "stand": "2022-08-11T12:52:07",
+        "opening": 107.80,
+        "previousClosing": 109.36,
+        "tradedVolume": 3139,
+        "tradedAmount": 338823.66,
+        "dailyHigh": 109.02,
+        "dailyLow": 106.82,
+        "high52w" : 157.98,
+        "high52wDate": "05/01/21",
+        "low52w" : 93.74,
+        "low52wDate": "05/07/22"
+      },
+      "baseData": {
+        "securityType": "commonShares",
+        "stockISIN": "DE0007236101",
+        "stockWKN": "723610",
+        "currency": "EUR",
+        "initialListingDate": "23/06/2017",
+        "foundingYear": "1847",
+        "fiscalDate": "30.09."
+      },
+      "fundamentalData": {
+        "industry": "Conglomerate",
+        "marketCapital" : 91750000000,
+        "pieces": 850000000,
+        "equityCapital" : 2550000000,
+        "numberOfEmployees": 402000,
+        "lastGeneralMeeting": "10/02/2022"
+      },
+      "portrait": "Die Siemens AG (Berlin und München) ist ein internationales Unternehmen der Elektronik und Elektrotechnik. Der Konzern ist auf den Gebieten Industrie und Energie sowie im Gesundheitssektor tätig. Siemens entwickelt und fertigt Produkte, projektiert und erstellt Systeme und Anlagen und bietet maßgeschneiderte Lösungen an."
+    },
+    {
+      "stockName": "Porsche Automobile Holding SE",
+      "priceInfo": {
+        "stockExchange": "Quotrix",
+        "lastUpdate": "2022-11-08T12:43:57",
+        "bid": 71.06,
+        "bidVolume": 600,
+        "offer": 71.08,
+        "offerVolume": 600,
+        "spreadPercentage": "0.0200 (0.03%)",
+        "lastTradePrice": 71.76,
+        "changePercentage": -1.29,
+        "stand": "2022-11-08T12:07:42",
+        "opening": 72.88,
+        "previousClosing": 72.70,
+        "tradedVolume": 534,
+        "tradedAmount": 38319.84,
+        "dailyHigh": 72.98,
+        "dailyLow":71.64,
+        "high52w" : 97.58,
+        "high52wDate": "02/23/22",
+        "low52w" : 59.20,
+        "low52wDate": "07/05/22"
+      },
+      "baseData": {
+        "securityType": "Preferred Stock",
+        "stockISIN": "DE000PAH0038",
+        "stockWKN": "PAH003",
+        "currency": "EUR",
+        "initialListingDate": "09/04/2008",
+        "foundingYear": "2007",
+        "fiscalDate": "07.31"
+      },
+      "fundamentalData": {
+        "industry": "Automobile",
+        "marketCapital" : 10990000000,
+        "pieces": 153125000,
+        "equityCapital" : 306250000,
+        "numberOfEmployees": 8712,
+        "lastGeneralMeeting": ""
+      },
+      "portrait": "Founded in Stuttgart in 1948, the company is one of the most traditional manufacturers of sporty premium vehicles and at the same time not only one of the smallest independent car manufacturers in the world but also the world's most profitable carmaker."
+    },
+    {
+      "stockName": "Adidas AG",
+      "priceInfo": {
+        "stockExchange": "Quotrix",
+        "ısoDate": "2022-11-8T13:33.43",
+        "bid":172,
+        "bidVolume":300,
+        "offer": 172.14,
+        "offerVolume": 300,
+        "spreadPercentage": "0.0400 (0.02%)",
+        "lastTradePrice": 171.48,
+        "changePercentage":-1.14 ,
+        "stand": "2022-11-8T12:17.44",
+        "opening":174.54,
+        "previousClosing": 173.46,
+        "tradedVolume": 156,
+        "tradedAmount": 2675088,
+        "dailyHigh": 175.32,
+        "dailyLow":71.00,
+        "high52w" : 171.48,
+        "high52wDate": "08/13/21",
+        "low52w" : 59.20,
+        "low52wDate": "07/14/22"
+      },
+      "baseData": {
+        "securityType": "common shares",
+        "stockISIN": "DE000A1EWWW0",
+        "stockWKN": "A1EWWW",
+        "currency": "EUR",
+        "initialListingDate": "10/11/2010",
+        "foundingYear": "1949",
+        "fiscalDate": "31.12"
+      },
+      "fundamentalData": {
+        "industry": "",
+        "marketCapital" : 32094000000,
+        "pieces": 15312500,
+        "equityCapital" :  306250000,
+        "numberOfEmployees": 8712,
+        "lastGeneralMeeting": ""
+      },
+      "portrait": "Adidas is now a global leader in the sporting goods industry and offers a comprehensive product portfolio. The adidas Group is based in Herzogenaurach, Germany. The company with its more than 170 subsidiaries worldwide is managed from there."
     }
   ]
 }
