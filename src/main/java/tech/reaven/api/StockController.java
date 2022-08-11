@@ -1,6 +1,5 @@
 package tech.reaven.api;
-
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import tech.reaven.StockListInitializer;
 import tech.reaven.model.Stock;
 import io.swagger.v3.oas.annotations.Operation;
@@ -23,13 +22,13 @@ import java.util.List;
 public class StockController {
     private List<Stock> stockList = new ArrayList<Stock>();
 
-    /*
+
     @PostConstruct
     private void init(){
         StockListInitializer stockListInitializer = new StockListInitializer();
         stockList = stockListInitializer.InitializeStockList();
     }
-     */
+
 
     @GetMapping("/{stockISIN}")
     @Operation(summary = "Get stock by ISIN", responses = {
