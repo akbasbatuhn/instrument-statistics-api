@@ -6,26 +6,41 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "Stocks", schema = "dbo")
+@Table(name = "Stocks")
 public class Stock {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(columnDefinition = "char(30)")
+    @Column(nullable = false, length = 45)
     private String stockName;
 
-    @Column(columnDefinition = "")
+    //@OneToOne(cascade = CascadeType.ALL)
+    @Embedded
+    //@JoinColumn(name = "price_info_id", referencedColumnName = "id")
     private PriceInfo priceInfo;
 
-    @Column
+//    @OneToOne(cascade = CascadeType.ALL)
+    @Embedded
+    //@JoinColumn(name = "base_data_id", referencedColumnName = "id")
     private BaseData baseData;
 
-    @Column
+//    @OneToOne(cascade = CascadeType.ALL)
+    @Embedded
+    //@JoinColumn(name = "fundamental_data_id", referencedColumnName = "id")
     private FundamentalData fundamentalData;
 
-    @Column(columnDefinition = "char(256)")
+    @Column(length = 512)
     private String portrait;
+
+    public Stock(String stockName, PriceInfo priceInfo,
+                 BaseData baseData, FundamentalData fundamentalData, String portrait) {
+        this.stockName = stockName;
+        this.priceInfo = priceInfo;
+        this.baseData = baseData;
+        this.fundamentalData = fundamentalData;
+        this.portrait = portrait;
+    }
 }
