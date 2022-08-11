@@ -35,11 +35,9 @@ public class JsonHandler {
         BaseData baseData = CreateBaseDataObject(jsonObject);
         FundamentalData fundamentalData = CreateFundamentalDataObject(jsonObject);
         String stockPortrait = GetPortrait(jsonObject);
-        /*
+
         return new Stock(stockName, priceInfo,
                 baseData, fundamentalData, stockPortrait);
-         */
-        return new Stock();
     }
 
     private String GetStockName(JSONObject jsonObject) {
