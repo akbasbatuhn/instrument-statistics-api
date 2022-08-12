@@ -30,14 +30,19 @@ public class JsonHandler {
     }
 
     private Stock CreateAStock(JSONObject jsonObject) {
+        String isinCode = GetISINCode(jsonObject);
         String stockName = GetStockName(jsonObject);
         PriceInfo priceInfo = CreatePriceInfoObject(jsonObject);
         BaseData baseData = CreateBaseDataObject(jsonObject);
         FundamentalData fundamentalData = CreateFundamentalDataObject(jsonObject);
         String stockPortrait = GetPortrait(jsonObject);
 
-        return new Stock(stockName, priceInfo,
+        return new Stock(isinCode, stockName, priceInfo,
                 baseData, fundamentalData, stockPortrait);
+    }
+
+    private String GetISINCode(JSONObject jsonObject){
+        return jsonObject.optString("isinCode", null);
     }
 
     private String GetStockName(JSONObject jsonObject) {
@@ -80,7 +85,7 @@ public class JsonHandler {
     }
 
     private PriceInfo InitializePriceInfoObject(JSONObject priceInfo) {
-        String stockExchange = priceInfo.optString("stockExchange", null);
+        String exchange = priceInfo.optString("exchange", null);
         String lastUpdate = priceInfo.optString("lastUpdate", null);
         BigDecimal bid = priceInfo.optBigDecimal("bid", null);
         int bidVolume = priceInfo.optInt("bidVolume", -1);
@@ -93,7 +98,7 @@ public class JsonHandler {
         BigDecimal opening = priceInfo.optBigDecimal("opening", null);
         BigDecimal previousClose = priceInfo.optBigDecimal("previousClosing", null);
         int tradedVolume = priceInfo.optInt("tradedVolume", -1);
-        float tradedAmount = priceInfo.optFloat("tradedAmount", -1f);
+        BigDecimal tradedAmount = priceInfo.optBigDecimal("tradedAmount", null);
         BigDecimal dailyHigh = priceInfo.optBigDecimal("dailyHigh", null);
         BigDecimal dailyLow = priceInfo.optBigDecimal("dailyLow", null);
         BigDecimal high52w = priceInfo.optBigDecimal("high52w", null);
@@ -101,7 +106,7 @@ public class JsonHandler {
         BigDecimal low52w = priceInfo.optBigDecimal("low52w", null);
         String low52wDate = priceInfo.optString("low52wDate", null);
 
-        return new PriceInfo(stockExchange, lastUpdate,
+        return new PriceInfo(exchange, lastUpdate,
                 bid, bidVolume, offer, offerVolume,
                 spreadPercentage, lastTradePrice, changePercentage,
                 stand, opening, previousClose,
@@ -115,14 +120,13 @@ public class JsonHandler {
 
     private BaseData InitializeBaseDataObject(JSONObject baseData) {
         String securityType = baseData.optString("securityType", null);
-        String stockISIN = baseData.optString("stockISIN", null);
-        String stockWKN = baseData.optString("stockWKN", null);
+        String wkn = baseData.optString("wkn", null);
         String currency = baseData.optString("currency", null);
         String initialListingDate = baseData.optString("initialListingDate", null);
         String foundingYear = baseData.optString("foundingYear", null);
         String fiscalDate = baseData.optString("fiscalDate", null);
 
-        return new BaseData(securityType, stockISIN, stockWKN,
+        return new BaseData(securityType, wkn,
                 currency, initialListingDate, foundingYear, fiscalDate);
     }
 
