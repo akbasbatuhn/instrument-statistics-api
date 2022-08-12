@@ -1,6 +1,7 @@
 package tech.reaven.model;
 
 import lombok.*;
+import org.springframework.boot.jackson.JsonComponent;
 
 import javax.persistence.*;
 
@@ -10,34 +11,28 @@ import javax.persistence.*;
 @Table(name = "Stocks")
 public class Stock {
     @Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    @Column(name = "isincode")
+    private String isinCode;
 
     @Column(nullable = false, length = 45)
-    private String stockName;
+    private String name;
 
-    //@OneToOne(cascade = CascadeType.ALL)
     @Embedded
-    //@JoinColumn(name = "price_info_id", referencedColumnName = "id")
     private PriceInfo priceInfo;
 
-//    @OneToOne(cascade = CascadeType.ALL)
     @Embedded
-    //@JoinColumn(name = "base_data_id", referencedColumnName = "id")
     private BaseData baseData;
 
-//    @OneToOne(cascade = CascadeType.ALL)
     @Embedded
-    //@JoinColumn(name = "fundamental_data_id", referencedColumnName = "id")
     private FundamentalData fundamentalData;
 
-    @Column(length = 512)
+    @Column(length = 255, columnDefinition = "TEXT")
     private String portrait;
 
-    public Stock(String stockName, PriceInfo priceInfo,
+    public Stock(String isinCode, String name, PriceInfo priceInfo,
                  BaseData baseData, FundamentalData fundamentalData, String portrait) {
-        this.stockName = stockName;
+        this.isinCode = isinCode;
+        this.name = name;
         this.priceInfo = priceInfo;
         this.baseData = baseData;
         this.fundamentalData = fundamentalData;

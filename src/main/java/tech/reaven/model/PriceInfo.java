@@ -10,16 +10,10 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @ToString
-//@Entity
-//@Table(name = "price_info")
 @Embeddable
 public class PriceInfo {
-//    @Id
-//    @Column
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-    //@Column(length = 25)
-    private String stockExchange;// börse in json file
+
+    private String exchange;// börse in json file
     private String lastUpdate;// update in json file
     private BigDecimal bid;// geld
     private int bidVolume;// geldStk
@@ -28,11 +22,11 @@ public class PriceInfo {
     private String spreadPercentage;// spredPercentage --> Spread (in %)
     private BigDecimal lastTradedPrice;// letzter
     private float changePercentage;// anderung
-    private String stand;// stand ISO DATE
+    private String stand;// stand - ISO DATE
     private BigDecimal opening;// eröffnung
     private BigDecimal previousClosing;// vortag
     private int tradedVolume;// gehandeltStücke
-    private float tradedAmount;// gehandeltUmsatz
+    private BigDecimal tradedAmount;// gehandeltUmsatz
     private BigDecimal dailyHigh;// tageschoch
     private BigDecimal dailyLow;// tagetief
     private BigDecimal high52w;
@@ -40,18 +34,15 @@ public class PriceInfo {
     private BigDecimal low52w;
     private String low52wDate;// 52wTief
 
-//    @OneToOne(mappedBy = "priceInfo")
-//    private Stock stock;
-
-    public PriceInfo(String stockExchange, String lastUpdate,
+    public PriceInfo(String exchange, String lastUpdate,
                      BigDecimal bid, int bidVolume,
                      BigDecimal offer, int offerVolume,
                      String spreadPercentage, BigDecimal lastTradedPrice,
                      float changePercentage, String stand, BigDecimal opening,
-                     BigDecimal previousClosing, int tradedVolume, float tradedAmount,
+                     BigDecimal previousClosing, int tradedVolume, BigDecimal tradedAmount,
                      BigDecimal dailyHigh, BigDecimal dailyLow, BigDecimal high52w,
                      String high52wDate, BigDecimal low52w, String low52wDate) {
-        this.stockExchange = stockExchange;
+        this.exchange = exchange;
         this.lastUpdate = lastUpdate;
         this.bid = bid;
         this.bidVolume = bidVolume;
