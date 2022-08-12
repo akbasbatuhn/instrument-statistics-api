@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import tech.reaven.service.StockService;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -22,6 +23,9 @@ import java.util.List;
 public class StockController {
     private List<Stock> stockList = new ArrayList<Stock>();
 
+    @Autowired
+    private StockService stockService;
+
 
     @PostConstruct
     private void init(){
@@ -29,22 +33,15 @@ public class StockController {
         stockList = stockListInitializer.InitializeStockList();
     }
 
-
     @GetMapping("/{stockISIN}")
-    @Operation(summary = "Get stock by ISIN", responses = {
+    @Operation(summary = "Get stock by ISIN Code", responses = {
             @ApiResponse(description = "Success", responseCode = "200",
             content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = Stock.class))),
             @ApiResponse(description = "Stock not found", responseCode = "404",
             content = @Content)
     })
-    public ResponseEntity<Stock> checkStock(String ISINCode){
-        for (Stock stock : stockList) {
-            if (stock.getBaseData().getStockISIN() != null) {
-                if (ISINCode.equals(stock.getBaseData().getStockISIN()))
-                    return ResponseEntity.ok(stock);
-            }
-        }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Stock not found");
+    public ResponseEntity<Stock> getStock(String isinCode){
+        return ResponseEntity.ok(stockService.find(isinCode));
     }
 }
