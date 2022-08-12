@@ -2,7 +2,9 @@ package tech.reaven.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 import tech.reaven.model.Stock;
 import tech.reaven.repository.StockRepository;
 
@@ -22,7 +24,7 @@ public class StockService {
         else{
             for(Stock stock : tempList){
                 for (Stock tempStock : stockList){
-                    if (!stock.getStockName().equals(tempStock.getStockName())){
+                    if (!stock.getName().equals(tempStock.getName())){
                         save(stock);
                     }
                 }
@@ -32,10 +34,18 @@ public class StockService {
     }
 
     public Stock save(Stock stock){
+
         return stockRepository.save(stock);
     }
 
     public Iterable<Stock> save(List<Stock> stockList){
         return stockRepository.saveAll(stockList);
+    }
+
+    public Stock find(String isinCode){
+        Stock foundStock = stockRepository.findByISINCode(isinCode);
+        if(foundStock != null)
+            return foundStock;
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Stock not found");
     }
 }
