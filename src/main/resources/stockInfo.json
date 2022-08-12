@@ -2,8 +2,9 @@
   "stockInfo": [
     {
       "stockName": "Mercedes-Benz Group AG",
+      "isinCode": "DE0007100000",
       "priceInfo": {
-        "stockExchange": "Quotrix",
+        "exchange": "Quotrix",
         "lastUpdate": "2022-07-25T09:22:15",
         "bid": 54.72,
         "bidVolume": 600,
@@ -26,8 +27,7 @@
       },
       "baseData": {
         "securityType": "commonShares",
-        "stockISIN": "DE0007100000",
-        "stockWKN": "710000",
+        "wkn": "710000",
         "currency": "EUR",
         "initialListingDate": "04/09/2008",
         "foundingYear": "1998",
@@ -45,8 +45,9 @@
     },
     {
       "stockName": "Volkswagen AG",
+      "isinCode": "DE0007664005",
       "priceInfo": {
-        "stockExchange": "Quotrix",
+        "exchange": "Quotrix",
         "lastUpdate": "2022-08-11T12:41:16",
         "bid": 196.65,
         "bidVolume": 140,
@@ -69,8 +70,7 @@
       },
       "baseData": {
         "securityType": "commonShares",
-        "stockISIN": "DE0007664005",
-        "stockWKN": "766400",
+        "wkn": "766400",
         "currency": "EUR",
         "initialListingDate": "04/09/2008",
         "foundingYear": "1938",
@@ -88,8 +88,9 @@
     },
     {
       "stockName": "Siemens AG",
+      "isinCode": "DE0007236101",
       "priceInfo": {
-        "stockExchange": "Quotrix",
+        "exchange": "Quotrix",
         "lastUpdate": "2022-08-11T13:01:31",
         "bid": 107.84,
         "bidVolume": 270,
@@ -112,8 +113,7 @@
       },
       "baseData": {
         "securityType": "commonShares",
-        "stockISIN": "DE0007236101",
-        "stockWKN": "723610",
+        "wkn": "723610",
         "currency": "EUR",
         "initialListingDate": "23/06/2017",
         "foundingYear": "1847",
@@ -131,8 +131,9 @@
     },
     {
       "stockName": "Porsche Automobile Holding SE",
+      "isinCode": "DE000PAH0038",
       "priceInfo": {
-        "stockExchange": "Quotrix",
+        "exchange": "Quotrix",
         "lastUpdate": "2022-11-08T12:43:57",
         "bid": 71.06,
         "bidVolume": 600,
@@ -155,8 +156,7 @@
       },
       "baseData": {
         "securityType": "Preferred Stock",
-        "stockISIN": "DE000PAH0038",
-        "stockWKN": "PAH003",
+        "wkn": "PAH003",
         "currency": "EUR",
         "initialListingDate": "09/04/2008",
         "foundingYear": "2007",
@@ -174,8 +174,9 @@
     },
     {
       "stockName": "Adidas AG",
+      "isinCode": "DE000A1EWWW0",
       "priceInfo": {
-        "stockExchange": "Quotrix",
+        "exchange": "Quotrix",
         "ısoDate": "2022-11-8T13:33.43",
         "bid":172,
         "bidVolume":300,
@@ -198,8 +199,7 @@
       },
       "baseData": {
         "securityType": "common shares",
-        "stockISIN": "DE000A1EWWW0",
-        "stockWKN": "A1EWWW",
+        "wkn": "A1EWWW",
         "currency": "EUR",
         "initialListingDate": "10/11/2010",
         "foundingYear": "1949",
