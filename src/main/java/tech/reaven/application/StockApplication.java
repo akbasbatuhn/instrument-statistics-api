@@ -1,10 +1,9 @@
-package tech.reaven.application;
+package tech.reaven;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import tech.reaven.StockListInitializer;
 import tech.reaven.api.StockController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,19 +14,20 @@ import tech.reaven.service.StockService;
 
 import java.util.List;
 
-@EnableJpaRepositories(basePackages = {"tech.reaven.repository"})
-@EntityScan("tech.reaven.model")
-@SpringBootApplication(scanBasePackages = {
-        "tech.reaven.config",
-        "tech.reaven.service",
-        "tech.reaven.repository",
-        "tech.reaven.api"
-})
-@ComponentScan(basePackageClasses = {
-        StockController.class,
-        StockService.class,
-        StockRepository.class
-})
+//@EnableJpaRepositories(basePackages = {"tech.reaven.repository"})
+//@EntityScan("tech.reaven.model")
+//@SpringBootApplication(scanBasePackages = {
+//        "tech.reaven.config",
+//        "tech.reaven.service",
+//        "tech.reaven.repository",
+//        "tech.reaven.api"
+//})
+//@ComponentScan(basePackageClasses = {
+//        StockController.class,
+//        StockService.class,
+//        StockRepository.class
+//})
+@SpringBootApplication
 public class StockApplication {
     private List<Stock> stockList;
 
