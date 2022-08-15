@@ -11,12 +11,17 @@ import javax.persistence.*;
 @ToString
 @Embeddable
 public class BaseData {
-
+    @Column(name = "security_type")
     private String securityType;
+    @Column(name = "wkn")
     private String wkn;
+    @Column(name = "currency")
     private String currency;
+    @Column(name = "initial_listing_date")
     private String initialListingDate;
+    @Column(name = "founding_year")
     private String foundingYear;
+    @Column(name = "fiscal_date")
     private String fiscalDate;
 
 

@@ -8,10 +8,10 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "Stocks")
+@Table(name = "Stock")
 public class Stock {
     @Id
-    @Column(name = "isincode")
+    @Column(name = "isin_code")
     private String isinCode;
 
     @Column(nullable = false, length = 45)
@@ -26,7 +26,7 @@ public class Stock {
     @Embedded
     private FundamentalData fundamentalData;
 
-    @Column(length = 255, columnDefinition = "TEXT")
+    @Column(name = "portrait", length = 255, columnDefinition = "TEXT")
     private String portrait;
 
     public Stock(String isinCode, String name, PriceInfo priceInfo,

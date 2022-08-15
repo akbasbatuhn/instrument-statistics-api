@@ -12,26 +12,45 @@ import java.math.BigDecimal;
 @ToString
 @Embeddable
 public class PriceInfo {
-
+    @Column(name = "exchange")
     private String exchange;// börse in json file
+    @Column(name = "last_update")
     private String lastUpdate;// update in json file
+    @Column(name = "bids")
     private BigDecimal bid;// geld
+    @Column(name = "bid_volume")
     private int bidVolume;// geldStk
+    @Column(name = "offer")
     private BigDecimal offer;//brief
+    @Column(name = "offer_volume")
     private int offerVolume;//briefStk
+    @Column(name = "spread_percentage")
     private String spreadPercentage;// spredPercentage --> Spread (in %)
+    @Column(name = "last_traded_price")
     private BigDecimal lastTradedPrice;// letzter
+    @Column(name = "change_percentage")
     private float changePercentage;// anderung
+    @Column(name = "stand")
     private String stand;// stand - ISO DATE
+    @Column(name = "opening")
     private BigDecimal opening;// eröffnung
+    @Column(name = "previous_closing")
     private BigDecimal previousClosing;// vortag
+    @Column(name = "traded_volume")
     private int tradedVolume;// gehandeltStücke
+    @Column(name = "traded_amount")
     private BigDecimal tradedAmount;// gehandeltUmsatz
+    @Column(name = "daily_high")
     private BigDecimal dailyHigh;// tageschoch
+    @Column(name = "daily_low")
     private BigDecimal dailyLow;// tagetief
+    @Column(name = "high52w")
     private BigDecimal high52w;
+    @Column(name = "high52w_date")
     private String high52wDate;// 52wHoch
+    @Column(name = "low52w")
     private BigDecimal low52w;
+    @Column(name = "low52w_date")
     private String low52wDate;// 52wTief
 
     public PriceInfo(String exchange, String lastUpdate,
