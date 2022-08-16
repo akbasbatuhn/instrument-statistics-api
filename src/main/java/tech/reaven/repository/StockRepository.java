@@ -8,6 +8,10 @@ import tech.reaven.model.Stock;
 
 @Repository
 public interface StockRepository extends JpaRepository<Stock, String> {
-    @Query(value = "SELECT * FROM stocks WHERE isincode LIKE BINARY CONCAT('%',:isincode,'%')", nativeQuery = true)
-    Stock findByISINCode(@Param("isincode") String stock_isin);
+    @Query(value =
+            "USE rv_is;\n" +
+            "SELECT *\n" +
+            "FROM [rv_is].[dbo].[stock]\n" +
+            "WHERE [isin_code] = :isin_code", nativeQuery = true)
+    Stock findByISINCode(@Param("isin_code") String stock_isin);
 }
