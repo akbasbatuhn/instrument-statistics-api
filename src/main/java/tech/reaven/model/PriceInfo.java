@@ -16,7 +16,7 @@ public class PriceInfo {
     private String exchange;// börse in json file
     @Column(name = "last_update")
     private String lastUpdate;// update in json file
-    @Column(name = "bids")
+    @Column(name = "bid")
     private BigDecimal bid;// geld
     @Column(name = "bid_volume")
     private int bidVolume;// geldStk
