@@ -11,7 +11,7 @@ import javax.persistence.*;
 @ToString
 @Embeddable
 public class FundamentalData {
-
+    @Column(name = "industry")
     private String industry;
     @Column(name = "market_capital")
     private long marketCapital;
