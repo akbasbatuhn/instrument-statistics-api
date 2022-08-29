@@ -3,9 +3,11 @@ package tech.reaven.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -14,8 +16,9 @@ import java.math.BigDecimal;
 public class PriceInfo {
     @Column(name = "exchange")
     private String exchange;// börse in json file
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @Column(name = "last_update")
-    private String lastUpdate;// update in json file
+    private Date lastUpdate;// update in json file
     @Column(name = "bid")
     private BigDecimal bid;// geld
     @Column(name = "bid_volume")
@@ -30,8 +33,9 @@ public class PriceInfo {
     private BigDecimal lastTradedPrice;// letzter
     @Column(name = "change_percentage")
     private float changePercentage;// anderung
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @Column(name = "stand")
-    private String stand;// stand - ISO DATE
+    private Date stand;// stand - ISO DATE
     @Column(name = "opening")
     private BigDecimal opening;// eröffnung
     @Column(name = "previous_closing")
@@ -53,11 +57,11 @@ public class PriceInfo {
     @Column(name = "low52w_date")
     private String low52wDate;// 52wTief
 
-    public PriceInfo(String exchange, String lastUpdate,
+    public PriceInfo(String exchange, Date lastUpdate,
                      BigDecimal bid, int bidVolume,
                      BigDecimal offer, int offerVolume,
                      String spreadPercentage, BigDecimal lastTradedPrice,
-                     float changePercentage, String stand, BigDecimal opening,
+                     float changePercentage, Date stand, BigDecimal opening,
                      BigDecimal previousClosing, int tradedVolume, BigDecimal tradedAmount,
                      BigDecimal dailyHigh, BigDecimal dailyLow, BigDecimal high52w,
                      String high52wDate, BigDecimal low52w, String low52wDate) {
