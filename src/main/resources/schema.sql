@@ -1,10 +1,10 @@
 
 IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='[dbo].[stock]' and xtype='U')
 CREATE TABLE [rv_is].[dbo].[stock](
-	[isin_code] [varchar](255) NOT NULL,
+	[isin_code] [varchar](255) PRIMARY KEY,
 	[name] [varchar](255) NOT NULL,
 	[exchange] [varchar](255) NULL,
-	[last_update] [varchar](255) NULL,
+	[last_update] [datetime2] NULL,
 	[bid] [decimal](19, 6) NULL,
 	[bid_volume] [int] NOT NULL,
 	[offer] [decimal](19, 6) NULL,
@@ -12,7 +12,7 @@ CREATE TABLE [rv_is].[dbo].[stock](
 	[spread_percentage] [varchar](255) NULL,
 	[last_traded_price] [decimal](19, 6) NULL,
 	[change_percentage] [float] NOT NULL,
-	[stand] [varchar](255) NULL,
+	[stand] [datetime2] NULL,
 	[opening] [decimal](19, 6) NULL,
 	[previous_closing] [decimal](19, 6) NULL,
 	[traded_volume] [int] NOT NULL,
@@ -42,3 +42,5 @@ ALTER TABLE [dbo].[stock] ADD PRIMARY KEY CLUSTERED
 (
 	[isin_code] ASC
 )
+
+
