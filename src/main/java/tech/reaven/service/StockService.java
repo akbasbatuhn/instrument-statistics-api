@@ -8,11 +8,17 @@ import org.springframework.web.server.ResponseStatusException;
 import tech.reaven.model.Stock;
 import tech.reaven.repository.StockRepository;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class StockService {
     @Autowired
-    private StockRepository stockRepository;
+    private final StockRepository stockRepository;
+
+    public List<Stock> findAllStocks(){
+        return stockRepository.findAll();
+    }
 
 
     public Stock find(String isinCode){
